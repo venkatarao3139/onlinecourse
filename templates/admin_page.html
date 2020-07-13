@@ -1,0 +1,38 @@
+{% extends 'common.html' %}
+{% block main %}
+   {% load static %}
+    <style>
+    the{
+        text-align: center;background-color: beige;font-family: "Arial";padding: 10px;
+    }
+    </style>
+    <form action="{% url 'adminpage' %}" method="post">
+    {% csrf_token %}
+<table align="center" border="0" bgcolor="#ff7f50">
+    <tr>
+        <th rowspan="4" class="the">
+            <img src=" {% static 'images/adminlogin.png'%} " width="150"height="150">
+        </th>
+    </tr>
+    <tr>
+        <th class="the">
+            <input type="text" placeholder="Username" required name="us">
+        </th>
+    </tr>
+    <tr>
+        <th class="the">
+            <input type="password" placeholder="Password" required name="ps">
+        </th>
+    <tr align="center">
+        <th class="the" >
+            <button type="submit" >Login</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            {{ data }}
+        </th>
+    </tr>
+</table>
+    </form>
+{% endblock %}
