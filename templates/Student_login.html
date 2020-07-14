@@ -1,0 +1,32 @@
+{% extends 'common.html' %}
+
+{% block menu %}
+    {% include 'stdent_menu.html' %}
+{% endblock %}
+{% block main %}
+{% load static %}
+    <form>
+    <table align="center" border="0" bgcolor="#8b008b">
+        <tr>
+            <th rowspan="4">
+                <img src="{% static 'images/log in.png' %}">
+            </th>
+        </tr>
+        <tr>
+            <th> UserID :
+                <input type="text" placeholder="UserID" name="u" required>
+            </th>
+        </tr>
+        <tr>
+            <th> Password :
+                <input type="password" placeholder="Password" name="u" required>
+            </th>
+        </tr>
+        <tr>
+            <th style="text-align: center">
+               <button type="submit" class="btn btn-outline-primary">Login</button>
+            </th>
+        </tr>
+    </table>
+    </form>
+{% endblock %}

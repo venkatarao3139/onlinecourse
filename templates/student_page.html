@@ -1,5 +1,25 @@
 {% extends 'common.html' %}
+
+{% block menu %}
+    {% include 'stdent_menu.html' %}
+{% endblock %}
 {% block main %}
 {% load static %}
-    Student Login Page
+    <table align="center" bgcolor="#f5f5dc">
+    <tr>
+        <th rowspan="3">
+            <img src="{% static 'images/hd-png.png' %}" width="500" height="400">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            available cources
+        </th>
+    </tr>
+        <tr>
+        <th>
+            sehdeled classes
+        </th>
+    </tr>
+    </table>
 {% endblock %}

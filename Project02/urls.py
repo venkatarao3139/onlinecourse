@@ -20,8 +20,11 @@ from App02 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',views.homepage,name='home'),
+    path('',views.homepage,name='home'),
     path('admin1/',views.adminpage,name='admin1'),
     path('student/',views.studentpage,name='student'),
-    path('adminpage/',views.adminhomepage,name='adminpage')
+    path('adminpage/',views.adminhomepage,name='adminpage'),
+    path('register/',views.register_page,name='register'),
+    path('Studentlogin/',views.Student_login,name='Studentlogin')
 ]
+

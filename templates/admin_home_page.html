@@ -1,28 +1,14 @@
 {% extends 'common.html' %}
+{% block menu %}
+    {% include 'admin_menu.html' %}
+{% endblock %}
 {% block main %}
     {% load static %}
-        <h1>
-            Welcome to Admin home page
-        </h1>
-
-    <table align="center" border="2">
+    <table align="center" border="2" >
     <tr>
         <th>
-            new course
-        </th>
-        <th>
-            list of sechudled classes
-        </th>
-        <th>
-            update the class
-        </th>
-        <th>
-            remove class
-        </th>
-        <th>
-            logout
+            <img src="{% static 'images/AA.jpg' %}">
         </th>
     </tr>
-
     </table>
 {% endblock %}

@@ -2,7 +2,7 @@
 {% block main %}
    {% load static %}
     <style>
-    the{
+    .the{
         text-align: center;background-color: beige;font-family: "Arial";padding: 10px;
     }
     </style>
@@ -10,7 +10,7 @@
     {% csrf_token %}
 <table align="center" border="0" bgcolor="#ff7f50">
     <tr>
-        <th rowspan="4" class="the">
+        <th rowspan="5" class="the">
             <img src=" {% static 'images/adminlogin.png'%} " width="150"height="150">
         </th>
     </tr>
@@ -25,11 +25,11 @@
         </th>
     <tr align="center">
         <th class="the" >
-            <button type="submit" >Login</button>
+            <button type="submit" class="btn btn-success">Login</button>
         </th>
     </tr>
     <tr>
-        <th>
+        <th style="font-family: 'Agency FB';background-color:beige;color:blue;padding: 5px;text-align: center">
             {{ data }}
         </th>
     </tr>

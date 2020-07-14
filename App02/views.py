@@ -18,5 +18,12 @@ def adminhomepage(request):
         if user=="venkat" and pswrd=="venky3139":
             return render(request,"admin_home_page.html")
         else:
-            messages.error(request,"invlid username or password")
-            return redirect('admin1')
+            return render(request,'admin_page.html',{"data":"invalid Details"})
+
+
+def register_page(request):
+    return render(request,"register_page.html")
+
+
+def Student_login(request):
+    return render(request,"Student_login.html")
