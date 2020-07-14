@@ -6,11 +6,12 @@
     {% load static %}
     <style>
     .stm{
-        align-content: center;padding: 10px;background-color:lawngreen;color: brown;font-size: 15px;font-family: "Arial Black";
+        align-content: center;padding:6px;background-color: #98e26f;color: #842323;font-size: 15px;font-family:"Arial";
     }
     </style>
-    <form action="#">
-    <table width="600" align="center">
+    <form action="{% url 'savestdent' %}"method="post">
+    {% csrf_token %}
+    <table  align="center">
         <tr>
             <th rowspan="9">
                 <img src="{% static 'images/reg1.png' %}" width="200" height="350" style="background: cadetblue">
@@ -48,10 +49,19 @@
         </th>
     </tr>
     <tr>
-        <th style="text-align: center">
+        <th  class="stm" style="text-align: center">
             <button type="submit" class="btn btn-outline-primary">Register</button>
         </th>
     </tr>
+     {% for x in messages %}
+         <tr style="text-align: center;
+                    background:green;color:white;
+                    font-family: 'Arial Black';padding: 9px;font-size:20px">
+             <th>
+                 {{ x }}
+             </th>
+         </tr>
+     {% endfor %}
     </table>
     </form>
 {% endblock %}

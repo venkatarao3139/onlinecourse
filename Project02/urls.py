@@ -25,6 +25,7 @@ urlpatterns = [
     path('student/',views.studentpage,name='student'),
     path('adminpage/',views.adminhomepage,name='adminpage'),
     path('register/',views.register_page,name='register'),
-    path('Studentlogin/',views.Student_login,name='Studentlogin')
+    path('Studentlogin/',views.Student_login,name='Studentlogin'),
+    path('savestdent',views.savestdent,name='savestdent')
 ]
 
