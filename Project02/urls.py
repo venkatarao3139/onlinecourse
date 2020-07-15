@@ -26,6 +26,8 @@ urlpatterns = [
     path('adminpage/',views.adminhomepage,name='adminpage'),
     path('register/',views.register_page,name='register'),
     path('Studentlogin/',views.Student_login,name='Studentlogin'),
-    path('savestdent',views.savestdent,name='savestdent')
+    path('savestdent/',views.savestdent,name='savestdent'),
+    path('newcource/',views.newcource,name='newcource'),
+    path('svaecourse/',views.svaecourse,name='svaecourse')
 ]
 

@@ -10,8 +10,13 @@
     {% csrf_token %}
 <table align="center" border="0" bgcolor="#ff7f50">
     <tr>
-        <th rowspan="5" class="the">
-            <img src=" {% static 'images/adminlogin.png'%} " width="150"height="150">
+        <th rowspan="6" class="the">
+            <img src=" {% static 'images/adminlogin.png'%} " width="300"height="260">
+        </th>
+    </tr>
+    <tr>
+        <th style="text-align: center;font-size: 25px">
+            ADMIN LOGIN
         </th>
     </tr>
     <tr>
@@ -29,7 +34,7 @@
         </th>
     </tr>
     <tr>
-        <th style="font-family: 'Agency FB';background-color:beige;color:blue;padding: 5px;text-align: center">
+        <th style="font-family: 'Arial Black';background-color:beige;color:blue;padding: 5px;text-align: center">
             {{ data }}
         </th>
     </tr>

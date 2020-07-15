@@ -1,0 +1,73 @@
+{% extends 'common.html' %}
+{% block menu %}
+    {% include 'admin_menu.html' %}
+{% endblock %}
+{% block main %}
+    {% load static %}
+    <style>
+    .curs{
+         padding: 7px; background-color: #f3e66e;color: firebrick;font-size:15px;
+        font-family: Arial;
+    }
+    </style>
+    <form action="{% url 'svaecourse' %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="0" >
+    <tr>
+        <th rowspan="10">
+            <img src="{% static 'images/course_registration.jpg' %}" width="300"height="400">
+        </th>
+    </tr>
+    <tr>
+        <th style="text-align: center;padding: 10px;color: darkblue;background: chartreuse;
+        font-family: 'Arial Black';font-size: 27px" >
+            COURSE ENROLEING FORM
+        </th>
+    </tr>
+    <tr>
+        <th class="curs">Course Name :
+            <input type="text" placeholder="Course Name" required name="c1">
+        </th>
+    </tr>
+    <tr>
+        <th class="curs"> Faculty Name :
+            <input type="text" placeholder="Faculty Name" required name="c2">
+        </th>
+    </tr>
+    <tr>
+        <th class="curs"> Enrole Date :
+            <input type="date" placeholder="Date" required name="c3">
+        </th>
+    </tr>
+    <tr>
+        <th class="curs">  Enrole Time :
+            <input type="time" placeholder="Time" required name="c4">
+        </th>
+    </tr>
+    <tr>
+        <th class="curs"> Course Fee
+            <input type="number" placeholder="Fee" required name="c5">
+        </th>
+    </tr>
+    <tr>
+        <th class="curs">Course Duration
+            <input type="text" placeholder="Duration" required name="c6">
+        </th>
+    </tr>
+    <tr>
+        <th style=" text-align: center;background:#fd5203"  >
+            <button type="submit" class="btn btn-outline-success">Register</button>
+        </th>
+    </tr>
+
+        {% for y in messages %}
+        <tr>
+            <th style=" text-align: center;background:#f10404;color:white;padding: 8px;font-size:18px;font-family: Arial">
+                {{ y }}
+            </th>
+        </tr>
+        {% endfor %}
+
+    </table>
+    </form>
+{% endblock %}

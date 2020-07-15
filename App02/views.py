@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from App02.models import Student_register
+from App02.models import Student_register,ScheduleNewClass
 def homepage(request):
     return render(request,"home_page.html")
 
@@ -19,7 +19,7 @@ def adminhomepage(request):
         if user=="venkat" and pswrd=="venky3139":
             return render(request,"admin_home_page.html")
         else:
-            return render(request,'admin_page.html',{"data":"invalid Details"})
+            return render(request,'admin_page.html',{"data":"INVALID ADMIN DETAILS"})
 
 
 def register_page(request):
@@ -39,3 +39,19 @@ def savestdent(request):
     Student_register(Name=name,contact=cont,email=email,user=usr,password=psr).save()
     messages.success(request," Student Data is Saved")
     return redirect('register')
+
+
+def newcource(request):
+    return render(request,"newc_ource.html")
+
+
+def svaecourse(request):
+    name = request.POST.get("c1")
+    fclty = request.POST.get("c2")
+    edate = request.POST.get("c3")
+    etime = request.POST.get("c4")
+    fee = request.POST.get("c5")
+    dur = request.POST.get("c6")
+    ScheduleNewClass(cname=name,Faculty=fclty,Date=edate,Time=etime,Fee=fee,Duration=dur).save()
+    messages.success(request,"New course is Saved ")
+    return redirect('newcource')
