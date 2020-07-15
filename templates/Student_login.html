@@ -5,11 +5,12 @@
 {% endblock %}
 {% block main %}
 {% load static %}
-    <form>
-    <table align="center"width="600">
+    <form action="{% url 'studentloginhome' %}" method="post">
+    {% csrf_token %}
+    <table align="center"width="700">
         <tr>
             <th rowspan="5">
-                <img src="{% static 'images/png.png' %}"width="250"height="280">
+                <img src="{% static 'images/png.png' %}"width="300"height="300">
             </th>
         </tr>
         <tr>
@@ -19,18 +20,23 @@
             </th>
         </tr>
         <tr>
-            <th style="text-align: center;padding: 10px;background:lavender;">
-                <input type="text" placeholder="UserID" name="u" required>
+            <th style="text-align: center;padding: 7px;background:lavender;">
+                <input type="text" placeholder="UserID" name="use" required>
             </th>
         </tr>
         <tr>
-            <th style="text-align: center;padding: 10px;background:lavender;">
-                <input type="password" placeholder="Password" name="u" required>
+            <th style="text-align: center;padding: 7px;background:lavender;">
+                <input type="password" placeholder="Password" name="psw" required>
             </th>
         </tr>
         <tr>
-            <th style="text-align: center;padding: 10px;background:lavender;">
+            <th style="text-align: center;padding:5px;background:lavender;">
                <button type="submit" class="btn btn-outline-primary">Login</button>
+            </th>
+        </tr>
+        <tr>
+            <th style=" text-align: center;background:#f10404;color:white;padding: 8px;font-size:18px;font-family: Arial">
+                {{ eror }}
             </th>
         </tr>
     </table>

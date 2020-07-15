@@ -60,3 +60,17 @@ def svaecourse(request):
 def courseslist(request):
     coureses = ScheduleNewClass.objects.all()
     return render(request,"list_of_courses.html",{"data":coureses})
+
+
+def studentlogin_home(request):
+    id = request.POST.get("use")
+    word = request.POST.get("psw")
+    sld = Student_register.objects.get(user=id)
+    if id == sld.user and word == sld.password:
+        return redirect("student_home")
+    else:
+        return render(request,"Student_login.html", {"eror": "INVALID STUDENT DETAILS"})
+
+
+def student_home(request):
+    return render(request,"student_home.html")
