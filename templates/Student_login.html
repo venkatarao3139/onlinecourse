@@ -6,24 +6,30 @@
 {% block main %}
 {% load static %}
     <form>
-    <table align="center" border="0" bgcolor="#8b008b">
+    <table align="center"width="600">
         <tr>
-            <th rowspan="4">
-                <img src="{% static 'images/log in.png' %}">
+            <th rowspan="5">
+                <img src="{% static 'images/png.png' %}"width="250"height="280">
             </th>
         </tr>
         <tr>
-            <th> UserID :
+            <th style="font-family: 'Agency FB';font-size: 26px;background: #06abf8;color:
+                        crimson;padding: 10px;text-align: center">
+                STUDENT LOGIN
+            </th>
+        </tr>
+        <tr>
+            <th style="text-align: center;padding: 10px;background:lavender;">
                 <input type="text" placeholder="UserID" name="u" required>
             </th>
         </tr>
         <tr>
-            <th> Password :
+            <th style="text-align: center;padding: 10px;background:lavender;">
                 <input type="password" placeholder="Password" name="u" required>
             </th>
         </tr>
         <tr>
-            <th style="text-align: center">
+            <th style="text-align: center;padding: 10px;background:lavender;">
                <button type="submit" class="btn btn-outline-primary">Login</button>
             </th>
         </tr>

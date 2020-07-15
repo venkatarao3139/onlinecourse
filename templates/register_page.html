@@ -6,7 +6,7 @@
     {% load static %}
     <style>
     .stm{
-        align-content: center;padding:6px;background-color: #98e26f;color: #842323;font-size: 15px;font-family:"Arial";
+        text-align: center;padding:6px;background-color: #98e26f;color: #842323;font-size: 15px;font-family:"Arial";
     }
     </style>
     <form action="{% url 'savestdent' %}"method="post">
@@ -19,32 +19,32 @@
         </tr>
     <tr>
         <th colspan="2" style="font-size: 35px;color:white;text-align: center;background-color: red;padding:10px">
-            Student Registration
+            STUDENT REGISTRATION
         </th>
     </tr>
 
     <tr>
-        <th class="stm"> Student Name :
+        <th class="stm">
             <input type="text" required placeholder="Name" name="t1">
         </th>
     </tr>
     <tr>
-        <th class="stm">Contact No :
+        <th class="stm">
             <input type="number" required placeholder="Phone No" name="t2">
         </th>
     </tr>
     <tr>
-        <th class="stm">Email ID :
+        <th class="stm">
             <input type="email" required placeholder="Email" name="t3">
         </th>
     </tr>
     <tr>
-        <th class="stm">User ID :
+        <th class="stm">
             <input type="text" placeholder="User ID" required name="t4">
         </th>
     </tr>
     <tr>
-        <th class="stm"> Password :
+        <th class="stm">
             <input type="text" placeholder="Password" required name="t5">
         </th>
     </tr>

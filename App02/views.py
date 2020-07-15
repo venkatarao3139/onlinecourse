@@ -55,3 +55,8 @@ def svaecourse(request):
     ScheduleNewClass(cname=name,Faculty=fclty,Date=edate,Time=etime,Fee=fee,Duration=dur).save()
     messages.success(request,"New course is Saved ")
     return redirect('newcource')
+
+
+def courseslist(request):
+    coureses = ScheduleNewClass.objects.all()
+    return render(request,"list_of_courses.html",{"data":coureses})
