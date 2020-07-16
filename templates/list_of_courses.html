@@ -7,6 +7,11 @@
 {% load static %}
     <table class="table">
   <thead class="thead-light">
+  <tr>
+      <th COLSPAN="9" style="text-align: center;font-family: 'Agency FB';color: crimson;font-size: 30px;background-color: #07f14a;padding: 6px">
+          LIST OF COURSES
+      </th>
+  </tr>
     <tr>
         <th  >SERIAL NO</th>
         <th >COURSE NAME</th>
@@ -15,8 +20,8 @@
         <th >TIME</th>
         <th >TUITION FEE</th>
         <th >DURATION</th>
-        <th>update</th>
-        <th>delete</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
     </tr>
         {% for x in data %}
          <tr>
@@ -27,6 +32,16 @@
              <th>{{ x.Time}}</th>
              <th>{{ x.Fee }}</th>
             <th>{{ x.Duration }}</th>
+            <th>
+                <a href="{% url 'courseslist' %}?pdl={{ x.regn }}">
+                <img src="{% static 'images/update.png' %}">
+                </a>
+            </th>
+            <th>
+                <a href="{% url 'courseslist' %}?pdl={{ x.regn }}">
+                <img src="{% static 'images/trash-can.png' %}">
+                </a>
+            </th>
          </tr>
          {% endfor %}
   </thead>
