@@ -30,7 +30,7 @@ urlpatterns = [
     path('newcource/',views.newcource,name='newcource'),
     path('svaecourse/',views.svaecourse,name='svaecourse'),
     path('courseslist/',views.courseslist,name='courseslist'),
-    path('studentloginhome/',views.studentlogin_home, name='studentloginhome'),
+    path('studentloginhome/',views.studentlogin_home,name='studentloginhome'),
     path('student_home/',views.student_home,name='student_home')
 ]
 

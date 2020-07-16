@@ -65,11 +65,11 @@ def courseslist(request):
 def studentlogin_home(request):
     id = request.POST.get("use")
     word = request.POST.get("psw")
-    sld = Student_register.objects.get(user=id)
-    if id == sld.user and word == sld.password:
+    std = Student_register.objects.get(user=id,password=word)
+    if id==std.user and word==std.password:
         return redirect("student_home")
     else:
-        return render(request,"Student_login.html", {"eror": "INVALID STUDENT DETAILS"})
+        return render(request, "Student_login.html", {"eror": "INVALID STUDENT DETAILS"})
 
 
 def student_home(request):
