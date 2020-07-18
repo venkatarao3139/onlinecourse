@@ -20,17 +20,27 @@ from App02 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # ================Admin and Course urls====================================
     path('',views.homepage,name='home'),
     path('admin1/',views.adminpage,name='admin1'),
-    path('student/',views.studentpage,name='student'),
     path('adminpage/',views.adminhomepage,name='adminpage'),
-    path('register/',views.register_page,name='register'),
-    path('Studentlogin/',views.Student_login,name='Studentlogin'),
-    path('savestdent/',views.savestdent,name='savestdent'),
     path('newcource/',views.newcource,name='newcource'),
     path('svaecourse/',views.svaecourse,name='svaecourse'),
     path('courseslist/',views.courseslist,name='courseslist'),
+    path('updatet<int:pk>/',views.Updatecourse.as_view(),name='update'),
+    path('remove<int:pk>/',views.Remove_course.as_view(),name='remove'),
+    # ================student urls=============================================
+    path('student/', views.studentpage, name='student'),
+    path('Studentlogin/', views.Student_login, name='Studentlogin'),
+    path('register/',views.register_page,name='register'),
+    path('savestdent/', views.savestdent, name='savestdent'),
     path('studentloginhome/',views.studentlogin_home,name='studentloginhome'),
-    path('student_home/',views.student_home,name='student_home')
+    path('student_home/', views.student_home, name='student_home'),
+    path('students_list/',views.student_list ,name='students_list')
+
+
+
+
+
 ]
 

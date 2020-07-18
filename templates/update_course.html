@@ -1,0 +1,28 @@
+{% extends 'common.html' %}
+{% block menu %}
+    {% include 'admin_menu.html' %}
+{% endblock %}
+{% block main %}
+{% load static %}
+    <form method="post">
+    {% csrf_token %}
+    <table align="center" bgcolor="#e6e6fa" border="2">
+    <tr>
+        <th colspan="2" style="text-align: center;background-color:darkmagenta;color: white;padding: 5px;
+            font-size: 25px;font-family: 'Times New Roman'">
+            UPDATE COUESE
+        </th>
+    </tr>
+    <tr>
+        <th bgcolor="white">
+            {{ form }}
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2" style="text-align: center">
+            <button type="submit" class="btn btn-outline-primary">Update</button>
+        </th>
+    </tr>
+    </table>
+    </form>
+{% endblock %}

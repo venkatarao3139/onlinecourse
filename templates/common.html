@@ -12,30 +12,35 @@
     <title> Python Assignments</title>
   </head>
   <body bgcolor="#7fff00">
-    <table align="center" border="0" width="1050">
+    <table align="center" border="2" width="1200">
         <tr style="text-align: center;font-family: 'cursive';font-size:45px;padding: 14px;
         color: #0707f8;background-color: #e8817d;text-shadow: black 5px 5px 5px">
             <th>
-                ONLINE COURSES REGISTRATIONS PORTAL
+                <img src="{% static 'images/swayam-portal1.jpg' %}"width="150" height="140">
             </th>
+            <th>
+                SWAYAM ONLINE COURSES REGISTRATIONS
+            </th>
+            <th><img src="{% static 'images/unnamed.jpg' %}" width="140" height="140"></th>
             </tr>
+
             <tr>
-                <th style="align-content: center;padding: 10px;color: brown">
+                <th  colspan="3" style="align-content: center;color: brown">
                     {% block menu %}
                         {% include 'main_menu.html' %}
                     {% endblock %}
                 </th>
             </tr>
             <tr>
-                <th>
+                <th colspan="3">
                     {% block main  %}
 
                     {% endblock %}
                 </th>
             </tr>
         <tr style="text-align: center;color: navy;background-color: #07f5f5;font-family: 'Times New Roman';
-                    font-size:20px;text-shadow: #842323 3px 3px 3px">
-            <th>
+                    font-size:20px;text-shadow: #842323 3px 3px 3px" >
+            <th colspan="3">
             Copyrights@python with Venky
             </th>
         </tr>

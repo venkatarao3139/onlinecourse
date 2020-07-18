@@ -13,14 +13,10 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'courseslist' %}"> Schedule Courses List </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Update Course</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="#">Remove Course</a>
-      </li>
         <li class="nav-item">
-        <a class="nav-link " href=""{% url 'admin1' %}">Logout</a>
+        <a class="nav-link " href="{% url 'adminpage' %}">
+            <img src="{% static 'images/logout.jpg' %}" width="60" height="30">
+        </a>
       </li>
     </ul>
   </div>

@@ -1,0 +1,34 @@
+{% extends 'common.html' %}
+{% block menu %}
+    {% include 'stdent_menu.html' %}
+{% endblock %}
+{% block main %}
+{% load static %}
+    <table class="table">
+  <thead class="thead-light">
+  <tr>
+      <th colspan="7">
+          STUDENTS LIST
+      </th>
+  </tr>
+    <tr>
+        <th>SERIAL NO</th>
+        <th >STUDENT NAME</th>
+        <th >CONTACT NO</th>
+        <th >EMAIL</th>
+        <th >USER</th>
+        <th>ENROLE COURSE</th>
+        <th>DISENROLL COURSE</th>
+    </tr>
+        {% for x in std %}
+         <tr>
+             <th>{{ x.regn}}</th>
+             <th>{{ x.Name}}</th>
+             <th>{{ x.contact}}</th>
+             <th>{{ x.email}}</th>
+             <th>{{ x.user}}</th>
+         </tr>
+         {% endfor %}
+  </thead>
+</table>
+{% endblock %}
